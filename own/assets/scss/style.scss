@@ -1,0 +1,48 @@
+@import "./vars";
+@import "./mixins";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#container{
+    background-color: $color1;
+    height: 100dvh;
+    width: 100dvw;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    .inner_container{
+        display: flex;
+        flex-direction: column;
+        margin-top: $margin-m;
+        width: 75dvw;
+        max-width: 75dvw;
+        border-radius: $br;
+        border: 2px solid $color3;
+        background-color: $white;
+        overflow: hidden;
+
+        @include sm{
+            width: 90vw;
+            max-width: 90vw;
+            margin-top: $margin-s;
+        }
+        aside{
+            background-color: $color2;
+            color: white;
+            width: 30%;
+            padding: 24px;
+            display: flex;
+            align-items: center;
+
+
+        }
+        article{
+            width :70%;
+            background-color: $white;
+        }
+
+    }
+}
