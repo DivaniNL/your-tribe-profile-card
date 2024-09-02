@@ -1,6 +1,31 @@
+@font-face {
+  font-family: "icomoon";
+  src: url("../icomoon/icomoon.eot");
+  src: url("../icomoon/icomoon.eot?#iefix") format("embedded-opentype"), url("../icomoon/icomoon.woff") format("woff"), url("../icomoon/icomoon.ttf") format("truetype"), url("../icomoon/icomoon.svg#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+[class*=" icon-"], [class^=icon-] {
+  font-family: icomoon !important;
+  speak: never;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 18px;
+}
+
+.icon-gamepad:before {
+  content: "\e900";
+}
+
 * {
   margin: 0;
   padding: 0;
+  font-family: "Montserrat", sans-serif;
 }
 
 #container {
@@ -13,7 +38,6 @@
 }
 #container .inner_container {
   display: flex;
-  flex-direction: column;
   margin-top: 100px;
   width: 75dvw;
   max-width: 75dvw;
@@ -21,6 +45,8 @@
   border: 2px solid #0076B1;
   background-color: #fff;
   overflow: hidden;
+  align-items: center;
+  justify-content: center;
 }
 @media (max-width: 768px) {
   #container .inner_container {
@@ -30,14 +56,53 @@
   }
 }
 #container .inner_container aside {
+  border-right: 2px dotted #0076B1;
   background-color: #6ACEFF;
   color: white;
-  width: 30%;
+  width: calc(30% - 2px);
   padding: 24px;
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+#container .inner_container aside .nav_wrapper .nav_item {
+  padding: 10px 0;
+}
+#container .inner_container aside .nav_wrapper .nav_item .button {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid #0076B1;
+  background-color: #fff;
+  transition: 0.2s ease;
+  font-size: 14px;
+  color: #0076B1;
+  border-radius: 24px;
+  text-align: center;
+}
+#container .inner_container aside .nav_wrapper .nav_item .button:hover {
+  background-color: #0076B1;
+  color: #fff;
+  cursor: pointer;
 }
 #container .inner_container article {
-  width: 70%;
+  width: calc(70% - 2px);
+  border-left: 2px dotted #0076B1;
   background-color: #fff;
+  position: relative;
+}
+#container .inner_container article .wrapper_container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+#container .inner_container article .wrapper_container .wrapper {
+  opacity: 0;
+  padding: 24px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+#container .inner_container article .wrapper_container .wrapper.active {
+  opacity: 1;
 }/*# sourceMappingURL=style.css.map */
