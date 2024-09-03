@@ -84,6 +84,9 @@
 }
 
 @mixin table{
+    border-radius: $br;
+    overflow: hidden;
+    margin-top: 10px;
     th, td{
         padding: 10px;
         text-align: left;
@@ -121,6 +124,12 @@
             &:last-child{
                 td{
                     border-bottom: 2px solid $color3;
+                    &:first-child{
+                        border-bottom-left-radius: 24px;
+                    }
+                    &:last-child{
+                        border-bottom-right-radius: 24px;
+                    }
                 }
             }
             td{
@@ -136,6 +145,7 @@
     }
 }
 @mixin facts_tbl{
+    margin-top: 10px;
     th, td{
         padding: 10px;
         text-align: left;
