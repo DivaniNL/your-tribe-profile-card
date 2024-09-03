@@ -1,8 +1,11 @@
 button{
     @include button;
 }
-table{
+table:not(.facts_tbl){
     @include table;
+}
+.facts_tbl{
+  @include facts_tbl;
 }
 a{
     text-decoration: none;
