@@ -191,7 +191,7 @@
     min-width: 0;
     padding: 0;
   }
-  #container .inner_container .article.active {
+  #container .inner_container .article .wrapper_container .wrapper.active {
     position: relative;
   }
 }/*# sourceMappingURL=style.css.map */

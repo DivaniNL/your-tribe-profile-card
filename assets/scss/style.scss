@@ -136,9 +136,14 @@
                 }
             }
             .article{
-                &.active{
-                    position: relative;
+                .wrapper_container{
+                    .wrapper{
+                        &.active{
+                            position: relative;
+                        }
+                    }
                 }
+
             }
         }
 
