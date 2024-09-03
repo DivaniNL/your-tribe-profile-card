@@ -9,29 +9,129 @@
     } 
 }
 @mixin button{
-    padding: 10px 15px;
-    display: flex;
-    justify-content: space-between;
-    border: 2px solid $color3;
-    background-color: $white;
-    transition: 0.2s ease;
-    font-size: 14px;
-    color: $color3;
-    border-radius: $br;
-    text-align: center;
-    .icon_btn{
-        margin-left: 10px;
+    button{
+        padding: 10px 15px;
+        display: flex;
+        justify-content: space-between;
+        border: 2px solid $color3;
+        background-color: $white;
+        transition: 0.2s ease;
+        font-size: 14px;
+        color: $color3;
+        border-radius: $br;
+        width: 100%;
+        text-align: center;
+        .icon_btn{
+            margin-left: 10px;
+        }
+        &:hover{
+            background-color: $color3;
+            color: $white;
+            cursor: pointer;
+        }
+        @include xs{
+            padding: 5px 8px;
+            font-size: 12px;
+            .icon_btn{
+                margin-left: 5px;
+            }
+        }
     }
-    &:hover{
-        background-color: $color3;
-        color: $white;
-        cursor: pointer;
+}
+@mixin navitem{
+    padding: 10px 0;
+    width: fit-content;
+    min-width: 160px;
+    &.active{
+        button{
+            background-color: $color3;
+            color: $white;
+            cursor: pointer;
+        }
+    }
+    button{
+        padding: 10px 15px;
+        display: flex;
+        justify-content: space-between;
+        border: 2px solid $color3;
+        background-color: $white;
+        transition: 0.2s ease;
+        font-size: 14px;
+        color: $color3;
+        border-radius: $br;
+        width: 100%;
+        text-align: center;
+        .icon_btn{
+            margin-left: 10px;
+        }
+        &:hover{
+            background-color: $color3;
+            color: $white;
+            cursor: pointer;
+        }
+        @include xs{
+            padding: 5px 8px;
+            font-size: 12px;
+            .icon_btn{
+                margin-left: 5px;
+            }
+        }
     }
     @include xs{
-        padding: 5px 8px;
-        font-size: 12px;
-        .icon_btn{
-            margin-left: 5px;
+        min-width: 0;
+        padding: 0;
+    }
+}
+
+@mixin table{
+    th, td{
+        padding: 10px;
+        text-align: left;
+        a{
+            color: $color3;
+            font-weight: bold;
+            transition: 0.2s ease;
+            &:hover{
+                color: $white;
+            }
+        }
+    }
+    thead{
+        tr{
+            th{
+                background-color: $color3;
+                color: $white;
+            }
+        }
+    }
+    tbody{
+        tr{
+            &:nth-child(even){
+                td{
+                    background-color: $color2;
+                    border: 1px solid $color3;
+                }
+            }
+            &:nth-child(odd){
+                td{
+                    background-color: $color4;
+                    border: 1px solid $color3;
+                }
+            }
+            &:last-child{
+                td{
+                    border-bottom: 2px solid $color3;
+                }
+            }
+            td{
+                font-size: 12px;
+                &:first-child{
+                    border-left: 2px solid $color3;
+                }
+                &:last-child{
+                    border-right: 2px solid  $color3;
+                }
+            }
         }
     }
 }
