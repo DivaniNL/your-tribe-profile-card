@@ -5,7 +5,7 @@ jQuery(document).ready(function ($) {
         console.log(num);
         $this.addClass("active")
         $this.siblings().removeClass('active');
-        let toshow = $('article .wrapper[data-receiver='+num+']');
+        let toshow = $('.article .wrapper[data-receiver='+num+']');
         toshow.addClass("active")
         toshow.siblings().removeClass('active');
     })
