@@ -11,10 +11,13 @@
 }
 #container{
     background-color: $color1;
-    height: 100%;
+    min-height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    @media (min-width: 500px){
+        height: 100vh;
+    }
     //container met achtergrond die de helke pagina bedekt en waarbij elementen erin gecentreerd zijn met een flexbox
     .inner_container{
         display: flex;
