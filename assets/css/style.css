@@ -396,6 +396,10 @@ body {
   }
   #container .inner_container article {
     width: 100%;
+    display: none;
+  }
+  #container .inner_container article.collapsed {
+    display: flex;
   }
   #container .inner_container article .wrapper_container .wrapper.active {
     position: relative;

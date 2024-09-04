@@ -171,7 +171,6 @@ body{
                         figcaption{
                             color: $color3;
                             font-size: 12px;
-                            
                         }
                     }
                 }
@@ -183,6 +182,10 @@ body{
             flex-direction: column;
             article{
                 width: 100%;
+                display: none;
+                &.collapsed{
+                    display: flex;
+                }
                 .wrapper_container{
                     .wrapper{
                         &.active{

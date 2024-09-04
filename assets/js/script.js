@@ -19,9 +19,12 @@ function checkActiveTab(){
     if(hasActiveClass) {
         $('aside').removeClass('no_tab_shown');
         $('aside').addClass('collapsed');
+        $('article').addClass('collapsed');
+
     } else {
         $('aside').removeClass('collapsed');
         $('aside').addClass('no_tab_shown');
+        $('article').removeClass('collapsed');
     }
 }
 function setActiveTab(){
