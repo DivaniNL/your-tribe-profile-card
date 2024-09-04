@@ -1,3 +1,4 @@
+//Met deze mixins zorg ik ervoor dat het minder tijd kost om media queries te maken
 @mixin sm{
     @media (max-width: 768px) {
         @content;
@@ -8,6 +9,8 @@
         @content;
     } 
 }
+
+//Een mixin met de standaard layout van een button die utieraard overschreven kan worden
 @mixin button{
     button{
         padding: 10px 15px;
@@ -38,6 +41,7 @@
         }
     }
 }
+//Mixin with navitems with buttons. Basically an extended version of button mixin
 @mixin navitem{
     padding: 10px 0;
     width: fit-content;
@@ -84,7 +88,7 @@
         padding: 0;
     }
 }
-
+//Basic table layout at jobs and education articles
 @mixin table{
     border-radius: $br;
     overflow: hidden;
@@ -146,6 +150,7 @@
         }
     }
 }
+//table layout for the facts article
 @mixin facts_tbl{
     margin-top: 10px;
     th, td{
@@ -157,6 +162,7 @@
             td{
                 font-size: 12px;
                 border: 1px solid $white;
+                //First and last child get an extra border so all the borders are the same size. Otherwise the left side of the table and the right side of the table have half the borders.
                 &:first-child{
                     border-left: 2px solid $white;
                     background-color: $color3;
@@ -167,6 +173,7 @@
                     border-right: 2px solid  $white;
                     background-color: $color4;
                 }
+                //Shortened for Vertical Align Top
                 &.vat{
                     vertical-align: top;
                 }

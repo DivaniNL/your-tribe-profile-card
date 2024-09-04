@@ -20,7 +20,7 @@ body{
     @media (min-width: 500px){
         height: 100vh;
     }
-    //container met achtergrond die de helke pagina bedekt en waarbij elementen erin gecentreerd zijn met een flexbox
+    //container with background that fills entire page where elements are centered with a flexbox
     .inner_container{
         display: flex;
         width: 75dvw;
@@ -40,7 +40,8 @@ body{
             border-right: 4px dotted $color3;
             background-color: $color2;
             color: $white;
-            width: calc(40% - 2px);
+            width: calc(40% - 2px); 
+            // -2px is because of the border to prevent elements being too fat
             padding: 24px;
             display: flex;
             align-items: center;
@@ -87,6 +88,7 @@ body{
                     width: 100%;
                 }
                 .nav_item{
+                    // Mixin navitem is used here
                     @include navitem;
                 }
             }
@@ -118,6 +120,7 @@ body{
         }
         article{
             width: calc(60% - 2px);
+            // -2px is because of the border to prevent elements being too fat
             background-color: $white;
             position: relative;
             display: flex;
@@ -126,6 +129,7 @@ body{
                 position: relative;
                 width: 100%;
                 .wrapper{
+                    //ive the wrappers styling, but hide them on default
                     opacity: 0;
                     padding: 24px;
                     width: 100%;
@@ -134,6 +138,7 @@ body{
                     top: 0;
                     height: 100%;
                     &.active{
+                        //Make the active wrapper visible and set it at the top so text can be selected to be copied or images can be saved
                         opacity: 1;
                         z-index: 99;
                         overflow: auto;

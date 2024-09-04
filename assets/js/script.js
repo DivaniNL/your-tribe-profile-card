@@ -1,6 +1,6 @@
 jQuery(document).ready(function ($) {
-    setActiveTab();
     checkActiveTab();
+    // Make wrapper with same data-number visible after the button with the same data-number is clicked
     $('nav .nav_item').on("click tap", function(){
         var $this = $(this);
         let num = $this.data('giver');
@@ -15,6 +15,7 @@ jQuery(document).ready(function ($) {
 });
 
 function checkActiveTab(){
+    //show correct wrappers after button press. And hide their siblings. Also the article gets classes so that, when there is no active button there is no whitespace below the nav.
     var hasActiveClass = $('.wrapper.active').length > 0;
     if(hasActiveClass) {
         $('aside').removeClass('no_tab_shown');
@@ -26,13 +27,4 @@ function checkActiveTab(){
         $('aside').addClass('no_tab_shown');
         $('article').removeClass('collapsed');
     }
-}
-function setActiveTab(){
-
-    var $this = $('nav .nav_item').first();
-    let num = $this.data('giver');
-    $this.toggleClass("active")
-    let toshow = $('article .wrapper[data-receiver='+num+']');
-    toshow.toggleClass("active")
-
 }

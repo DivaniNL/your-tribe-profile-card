@@ -1,10 +1,13 @@
+
+//Setted color variables
 $color1: #c3c3c3;
 $color2: #6ACEFF;
 $color3: #0076B1;
 $color4: #a1e2ff;
-$font1: "Montserrat", sans-serif;
 $white: #fff;
 
+//Setted basic font
+$font1: "Montserrat", sans-serif;
 
 $br: 24px;
 
@@ -15,7 +18,7 @@ $br: 24px;
 $margin-m: 100px;
 $margin-s: 50px;
 
-
+//Import icomoon
 @font-face {
     font-family: "icomoon";
     src: url("../icomoon/icomoon.eot");

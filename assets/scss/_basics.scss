@@ -7,17 +7,24 @@ table:not(.facts_tbl){
 .facts_tbl{
   @include facts_tbl;
 }
+//Above hjere i set the default mixins included for some elements
+
+//Getting rid of some default styling of the link element
 a{
     text-decoration: none;
     font-size: inherit !important;
 }
-/* Works on Firefox */
+
+
+
+//Custom scrollbar
+/* Firefox */
 * {
     scrollbar-width: thin;
     scrollbar-color: $color3 $color4;
   }
   
-  /* Works on Chrome, Edge, and Safari */
+  /* Chrome, Edge, and Safari */
   *::-webkit-scrollbar {
     width: 12px;
   }
