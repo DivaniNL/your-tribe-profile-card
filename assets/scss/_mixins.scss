@@ -41,7 +41,7 @@
 @mixin navitem{
     padding: 10px 0;
     width: fit-content;
-    min-width: 160px;
+    min-width: 165px;
     &.active{
         button{
             background-color: $color3;
@@ -61,8 +61,10 @@
         border-radius: $br;
         width: 100%;
         text-align: center;
-        .icon_btn{
-            margin-left: 10px;
+        .icon_wrapper{
+            width: 35px;
+            justify-content: center;
+            display: flex;
         }
         &:hover{
             background-color: $color3;
