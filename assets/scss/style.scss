@@ -79,9 +79,13 @@ body{
                     border-bottom: 2px solid $color3;
                 }
             }
-            .nav_wrapper{
-                padding-top: 20px;
-                width: 100%;
+            nav{
+
+                ul{
+                    list-style-type: none;
+                    padding-top: 20px;
+                    width: 100%;
+                }
                 .nav_item{
                     @include navitem;
                 }
@@ -95,11 +99,14 @@ body{
                         border-bottom:0;
                     }
                 }
-                .nav_wrapper{
-                    display: flex;
-                    flex-wrap: wrap;
-                    gap: 5px;
-                    border-top: 2px solid $color3;
+                nav{
+                    ul{
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 5px;
+                        border-top: 2px solid $color3;
+                    }
+                    
                 }
                 &.collapsed{
                     border-bottom: 4px dotted $color3;
@@ -109,7 +116,7 @@ body{
                 }
             }
         }
-        .article{
+        article{
             width: calc(60% - 2px);
             background-color: $white;
             position: relative;
@@ -174,7 +181,7 @@ body{
         @include xs{
             //responsive code 500px
             flex-direction: column;
-            .article{
+            article{
                 width: 100%;
                 .wrapper_container{
                     .wrapper{
