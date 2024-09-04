@@ -179,8 +179,11 @@ a {
   font-family: "Montserrat", sans-serif;
 }
 
-#container {
+body {
   background-color: #c3c3c3;
+}
+
+#container {
   min-height: 100%;
   display: flex;
   justify-content: center;

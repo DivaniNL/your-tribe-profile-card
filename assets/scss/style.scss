@@ -9,8 +9,10 @@
     padding: 0;
     font-family: $font1;
 }
-#container{
+body{
     background-color: $color1;
+}
+#container{
     min-height: 100%;
     display: flex;
     justify-content: center;
