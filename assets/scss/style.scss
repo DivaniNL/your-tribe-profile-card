@@ -31,7 +31,7 @@ body{
             top: 100%;
             left: calc(40% + 22px);
             transform: translateX(-50%);
-            width: 100px;
+            width: 150px;
             .wrapper{
                 width: 100%;
                 display: flex;
@@ -48,7 +48,7 @@ body{
                     background-color: $white;
                     transition: 0.2s ease;
                     font-size: 14px;
-                    border-top: 0;
+                    margin-top: -2px;
 
                     svg{
                         width: 14px;
@@ -68,33 +68,43 @@ body{
                 }
                 .contentbar{
                     display: none;
-                    background-color: $white;
-                    border-left: 2px solid $color3;
-                    border-right: 2px solid $color3;
-                    padding: 10px;
-                    .icon_container{
-                        background-color: $color3;
-                        transition: 0.2s ease;
-                        font-size: 14px;
-                        width: fit-content;
-                        border-radius: 5px;
-                        padding: 5px;
+                    .contentbar_inner{
                         display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        svg{
-                            *{
-                                fill: $white;
+                        background-color: $white;
+                        border-left: 2px solid $color3;
+                        border-right: 2px solid $color3;
+                        padding: 10px;
+                        justify-content: space-between;
+                        .icon_container{
+                            background-color: $color3;
+                            transition: 0.2s ease;
+                            font-size: 14px;
+                            width: fit-content;
+                            border-radius: 5px;
+                            padding: 5px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            a{
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
                             }
-                        }
-                        &:hover{
-                            &:has(a){
-                                transform: scale(1.05);
+                            svg{
+                                *{
+                                    fill: $white;
+                                }
                             }
-                            
-                            
-                        }
+                            &:hover{
+                                &:has(a){
+                                    transform: scale(1.05);
+                                }
+                                
+                                
+                            }
+                        } 
                     }
+
                 }
             }
 
