@@ -7,10 +7,15 @@ jQuery(document).ready(function ($) {
         $this.toggleClass("active")
         $this.siblings().removeClass('active');
         let toshow = $('article .wrapper[data-receiver='+num+']');
-        toshow.toggleClass("active")
+        toshow.toggleClass("active");
         toshow.siblings().removeClass('active');
         checkActiveTab();
     })
+    $('.svg_container').on('click tap', function(){
+        $(this).next().slideToggle();
+        $(this).find('.opened').toggle();
+        $(this).find('.closed').toggle();
+    });
 
 });
 
