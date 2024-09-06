@@ -11,7 +11,7 @@ jQuery(document).ready(function ($) {
         toshow.siblings().removeClass('active');
         checkActiveTab();
     })
-    $('.svg_container').on('click tap', function(){
+    $('#sidebar .svg_container').on('click tap', function(){
         $(this).next().slideToggle();
         $(this).find('.opened').toggle();
         $(this).find('.closed').toggle();
