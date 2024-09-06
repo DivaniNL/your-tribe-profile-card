@@ -160,7 +160,7 @@
     tbody{
         tr{
             td{
-                font-size: 12px;
+                font-size: 14px;
                 border: 1px solid $white;
                 //First and last child get an extra border so all the borders are the same size. Otherwise the left side of the table and the right side of the table have half the borders.
                 &:first-child{
